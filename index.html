@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday Mehboob Alam</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;800&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#07060b;--gold:#e9c46a;--rose:#c8456b;--ink:#f3ead7;--dim:#9b93a6;--slat:#2a2733;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--ink);overflow:hidden;font-family:'Cinzel',Georgia,serif}
+canvas{position:fixed;inset:0;width:100%;height:100%}
+#fw{pointer-events:none;z-index:5}
+#wish{position:fixed;inset:0;height:100dvh;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(14px,4vh,32px) 14px 28px;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;
+background:radial-gradient(ellipse at 50% 30%,#2a1230 0%,#0c0813 55%,#050408 100%)}
+#wish>*{position:relative;z-index:2;max-width:100%}
+#wish>:first-child{margin-top:auto}
+#wish>:last-child{margin-bottom:auto}
+.small{letter-spacing:.35em;font-size:clamp(11px,2.6vw,15px);color:var(--dim);margin:0}
+h1{margin:.3em 0 .1em;font-size:clamp(34px,10vw,84px);font-weight:800;letter-spacing:.06em;line-height:1.05;
+background:linear-gradient(100deg,#8a6a1f,#f6e27a 35%,#e9c46a 50%,#fff3b0 60%,#a8791f);background-size:200% 100%;
+-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite;filter:drop-shadow(0 0 18px #e9c46a55)}
+@keyframes shine{to{background-position:-200% 0}}
+.poem{font-family:'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif;direction:rtl;font-size:clamp(17px,4.4vw,26px);line-height:2.1;margin:8px 0 18px;width:min(640px,100%);padding:0 6px;box-sizing:border-box}
+.poem p{margin:0 0 10px;opacity:0;transform:translateY(10px);transition:opacity 1.4s,transform 1.4s;color:#f1dfc0;text-shadow:0 0 14px #c8456b55}
+.poem p.on{opacity:1;transform:none}
+.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:6px;padding-bottom:12px}
+@media(max-width:520px){.btns{display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:340px}button{padding:11px 8px;font-size:12px;letter-spacing:.06em}.cake{font-size:34px;margin:2px}h1{font-size:clamp(30px,11vw,56px)}}
+button{font:inherit;font-size:13px;letter-spacing:.12em;color:var(--ink);background:#ffffff0d;border:1px solid #e9c46a66;border-radius:40px;padding:11px 20px;cursor:pointer;transition:.25s}
+button:hover{background:var(--gold);color:#15101c;box-shadow:0 0 24px #e9c46a77}
+button:focus-visible,#grip:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.cake{font-size:40px;cursor:pointer;margin:6px;user-select:none;filter:drop-shadow(0 0 12px #ffb347)}
+.cake.out{filter:grayscale(.6) brightness(.7)}
+#blinds{position:fixed;inset:0;z-index:10;background:#000}
+#blinds .light{position:absolute;inset:0;background:linear-gradient(180deg,#f7e3b0 0%,#d9a95a 100%);opacity:.9}
+.slat{position:absolute;left:0;right:0;transform-origin:top;background:linear-gradient(180deg,#4a4658 0%,#2a2733 40%,#14121a 100%);
+border-bottom:2px solid #0a0910;box-shadow:0 6px 14px #000a;will-change:transform}
+#title{position:fixed;z-index:11;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;pointer-events:none;padding:0 70px 0 20px;transition:opacity .3s}
+#title b{display:block;font-size:clamp(22px,6vw,44px);letter-spacing:.2em;color:#0d0a12;text-shadow:0 0 20px #fff8}
+#title span{font-size:clamp(11px,2.8vw,14px);letter-spacing:.3em;color:#e9c46a;text-shadow:0 2px 6px #000}
+#cord{position:fixed;z-index:12;right:clamp(18px,6vw,60px);top:env(safe-area-inset-top,0px);width:2px;background:var(--gold);box-shadow:0 0 8px #e9c46a;height:90px}
+#grip{position:absolute;left:50%;bottom:-26px;width:30px;height:46px;margin-left:-15px;border-radius:15px 15px 20px 20px;cursor:grab;touch-action:none;
+background:radial-gradient(circle at 35% 30%,#fff3b0,#e9c46a 50%,#8a6a1f);box-shadow:0 0 18px #e9c46a99}
+#cord .tip{position:absolute;right:30px;bottom:-4px;white-space:nowrap;font-size:11px;letter-spacing:.25em;color:#fff;text-shadow:0 1px 6px #000;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+@media(prefers-reduced-motion:reduce){h1,#cord .tip{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+<section id="wish" aria-label="Birthday wish">
+  <p class="small">A WISH FOR YOU, MY FRIEND</p>
+  <div class="small" style="margin-top:14px">HAPPY BIRTHDAY</div>
+  <h1>MEHBOOB ALAM</h1>
+  <div class="cake" id="cake" title="Blow out the candle" role="button" tabindex="0" aria-label="Blow out the candle">🎂</div>
+  <div class="poem" id="poem">
+    <p>تیری ہر صبح میں خوشیوں کی اذاں ہو محبوب<br>تیرے ہر خواب کی تعبیر جواں ہو محبوب</p>
+    <p>چاند تاروں سے سجی ہو تری ہر اک خوشی<br>زندگی تیری سدا پھولوں کا جہاں ہو محبوب</p>
+    <p>دوستی کا یہ چراغ آندھیوں میں بھی نہ بجھے<br>تُو سلامت رہے، رب تجھ پہ مہرباں ہو محبوب</p>
+  </div>
+  <div class="btns">
+    <button id="bFw">✦ FIREWORKS</button>
+    <button id="bMu">♪ MUSIC</button>
+    <button id="bNx">NEXT COUPLET</button>
+    <button id="bCl">CLOSE BLINDS</button>
+  </div>
+</section>
+<canvas id="fw"></canvas>
+
+<div id="blinds"><div class="light"></div></div>
+<div id="title"><b>A SURPRISE AWAITS</b><span>PULL THE CORD DOWN</span></div>
+<div id="cord"><span class="tip">PULL</span><div id="grip" role="button" tabindex="0" aria-label="Pull the cord to open the blinds"></div></div>
+
+<script>
+const $=s=>document.querySelector(s);
+/* ---------- blinds ---------- */
+const N=16, blinds=$('#blinds'), grip=$('#grip'), cord=$('#cord'), title=$('#title');
+const slats=[]; for(let i=0;i<N;i++){const d=document.createElement('div');d.className='slat';blinds.appendChild(d);slats.push(d)}
+const MAXPULL=240; let p=0, opened=false, drag=false, startY=0, raf=0;
+function layout(){const h=innerHeight/N;slats.forEach((s,i)=>{s.style.height=h+'px'})}
+function setP(v){
+  p=Math.max(0,Math.min(1,v)); const h=innerHeight/N;
+  slats.forEach((s,i)=>{
+    const local=Math.max(0,Math.min(1,p*1.25-(i/N)*0.25)); // staggered
+    const sc=1-0.88*local;
+    s.style.top=(i*h*(1-p))+'px';
+    s.style.transform='scaleY('+sc+') perspective(400px) rotateX('+(local*50)+'deg)';
+  });
+  cord.style.height=(90+p*MAXPULL)+'px';
+  title.style.opacity=1-p*2.2;
+  blinds.style.opacity=p>.98?0:1; blinds.style.pointerEvents=p>.98?'none':'auto';
+  cord.style.opacity=p>.98?0:1; cord.style.pointerEvents=p>.98?'none':'auto';
+}
+function animateTo(t,done){cancelAnimationFrame(raf);(function step(){const d=t-p; if(Math.abs(d)<.004){setP(t);done&&done();return}
+  setP(p+d*.09);raf=requestAnimationFrame(step)})()}
+function open(){animateTo(1,()=>{if(!opened){opened=true;reveal();burst(innerWidth/2,innerHeight*.35,3)}})}
+function closeB(){opened=false;hide();animateTo(0)}
+grip.addEventListener('pointerdown',e=>{drag=true;startY=e.clientY-p*MAXPULL;grip.setPointerCapture(e.pointerId);cancelAnimationFrame(raf);tone(220,.15)});
+grip.addEventListener('pointermove',e=>{if(drag)setP((e.clientY-startY)/MAXPULL)});
+grip.addEventListener('pointerup',()=>{if(!drag)return;drag=false;p>.35?open():animateTo(0)});
+grip.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '||e.key==='ArrowDown'){e.preventDefault();open()}});
+addEventListener('resize',()=>{layout();setP(p);sizeC()});
+/* ---------- poem ---------- */
+const ps=[...document.querySelectorAll('.poem p')]; let cur=0, timers=[];
+function hide(){timers.forEach(clearTimeout);ps.forEach(x=>x.classList.remove('on'));cur=0}
+function reveal(){hide();ps.forEach((x,i)=>timers.push(setTimeout(()=>{x.classList.add('on');cur=i+1;tone(440+i*110,.4)},900+i*2600)))}
+$('#bNx').onclick=()=>{ps.forEach(x=>x.classList.remove('on'));const i=cur%ps.length;ps[i].classList.add('on');cur=i+1;tone(520,.3)};
+$('#bCl').onclick=closeB;
+/* ---------- audio ---------- */
+let ac, musicOn=false, mTimer;
+function ctx(){return ac||(ac=new (window.AudioContext||window.webkitAudioContext)())}
+function tone(f,d=.5,v=.05){try{const a=ctx(),o=a.createOscillator(),g=a.createGain();o.type='sine';o.frequency.value=f;
+ g.gain.setValueAtTime(0,a.currentTime);g.gain.linearRampToValueAtTime(v,a.currentTime+.03);g.gain.exponentialRampToValueAtTime(.0001,a.currentTime+d+.6);
+ o.connect(g).connect(a.destination);o.start();o.stop(a.currentTime+d+.7)}catch(e){}}
+const scale=[261.6,311.1,392,466.2,523.3,622.3,784];
+$('#bMu').onclick=function(){musicOn=!musicOn;this.textContent=musicOn?'♪ MUSIC ON':'♪ MUSIC';
+ clearInterval(mTimer); if(musicOn){let i=0;mTimer=setInterval(()=>{tone(scale[[0,2,4,3,5,2,6,4][i%8]],.5,.06);if(i%8==0)tone(130.8,1.4,.05);i++},520)}};
+/* ---------- fireworks ---------- */
+const fw=$('#fw'),fc=fw.getContext('2d'),sc=$('#stars'),sx=sc.getContext('2d');let parts=[],stars=[];
+function sizeC(){fw.width=sc.width=innerWidth;fw.height=sc.height=innerHeight;stars=Array.from({length:120},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.4+.2,t:Math.random()*6}))}
+function burst(x,y,n=1){for(let k=0;k<n;k++){const hue=Math.random()*60+(Math.random()<.5?330:30),cx=x+(k?Math.random()*200-100:0),cy=y+(k?Math.random()*120-60:0);
+ for(let i=0;i<70;i++){const a=Math.PI*2*i/70,s=Math.random()*4+1.5;parts.push({x:cx,y:cy,vx:Math.cos(a)*s,vy:Math.sin(a)*s,l:1,h:hue})}}
+ tone(180,.1,.08)}
+$('#bFw').onclick=()=>{for(let i=0;i<5;i++)setTimeout(()=>burst(Math.random()*innerWidth*.8+innerWidth*.1,Math.random()*innerHeight*.5+60),i*350)};
+fw.addEventListener('click',()=>{});
+addEventListener('pointerdown',e=>{if(opened&&e.target.tagName!=='BUTTON')burst(e.clientX,e.clientY)});
+function loop(t){
+ sx.clearRect(0,0,sc.width,sc.height);stars.forEach(s=>{sx.globalAlpha=.4+.6*Math.abs(Math.sin(t/1500+s.t));sx.fillStyle='#fff';sx.beginPath();sx.arc(s.x,s.y,s.r,0,7);sx.fill()});
+ fc.clearRect(0,0,fw.width,fw.height);fc.globalCompositeOperation='lighter';
+ parts=parts.filter(q=>q.l>0);parts.forEach(q=>{q.x+=q.vx;q.y+=q.vy;q.vy+=.04;q.vx*=.985;q.l-=.013;fc.fillStyle='hsla('+q.h+',90%,60%,'+q.l+')';fc.beginPath();fc.arc(q.x,q.y,2.2,0,7);fc.fill()});
+ requestAnimationFrame(loop)}
+/* ---------- candle ---------- */
+function toggleCake(){const c=$('#cake');c.classList.toggle('out');c.textContent=c.classList.contains('out')?'🎂':'🎂';
+ if(c.classList.contains('out')){burst(innerWidth/2,innerHeight*.3,4)}}
+$('#cake').onclick=toggleCake;$('#cake').onkeydown=e=>{if(e.key==='Enter')toggleCake()};
+sizeC();layout();setP(0);requestAnimationFrame(loop);
+</script>
+</body>
+</html>
